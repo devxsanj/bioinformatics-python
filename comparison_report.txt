@@ -1,0 +1,7 @@
+--- Comparison Summary ---
+Length: 13
+Matches: 13
+Mutations: 0
+Similarity: 100.0%
+
+No mutations found.

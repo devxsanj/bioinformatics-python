@@ -1,0 +1,16 @@
+--- Sequence 1 ---
+Length: 8
+A: 2
+T: 2
+G: 2
+C: 2
+GC Content: 50.0%
+
+--- Sequence 2 ---
+Length: 8
+A: 2
+T: 3
+G: 1
+C: 2
+GC Content: 37.5%
+
