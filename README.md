@@ -63,26 +63,26 @@ BioIntel-Seq combines basic bioinformatics techniques with simple biological int
 ```bash
 python biotoolkit.py
 
-Example Workflow
+## Example Workflow
 Input DNA sequences
 Analyze or compare sequences
 Detect mutations
 View biological insights
 Export results (text / CSV)
 
-Future Improvements
+## Future Improvements
 Integration with real genomic databases (NCBI)
 Machine learning for mutation impact prediction
 Graphical user interface (GUI)
 Advanced visualization (graphs, plots)
 
- Project Purpose
+## Project Purpose
 This project was built to:
 Understand how biological data can be analyzed using code
 Bridge the gap between computation and biological meaning
 Move beyond basic scripts to a structured bioinformatics tool
 
-Author
+## Author
 Sanjana Pandey
 B.Sc. Biotechnology (Hons. with Research)
 Galgotias University
