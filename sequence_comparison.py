@@ -1,3 +1,4 @@
+from biological_insights import sequence_insight
 def compare_summary(seq1, seq2):
     seq1 = seq1.upper()
     seq2 = seq2.upper()
@@ -23,10 +24,18 @@ def compare_summary(seq1, seq2):
     print(f"Mutations: {len(mutations)}")
     print(f"Similarity: {round(similarity, 2)}%")
 
+    gc_content = ((seq1.count('G') + seq1.count('C')) / len(seq1)) * 100
+    print(f"GC Content: {round(gc_content, 2)}%")
+
     if mutations:
         print("\nMutation Details:")
         for pos, a, b in mutations:
             print(f"Position {pos}: {a} -> {b}")
+
+    mutation_count = len(mutations)
+    gc_content = ((seq1.count('G') + seq1.count('C')) / len(seq1)) * 100
+
+    sequence_insight(seq1, gc_content, mutation_count)
 
 def save_comparison_report(seq1, seq2, filename="comparison_report.txt"):
     seq1 = seq1.upper()

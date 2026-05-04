@@ -3,6 +3,9 @@ from fasta_report import save_fasta_report
 from dna_analyzer import analyze_dna
 from mutationchecker import compare_dna
 from sequence_comparison import compare_summary, save_comparison_report
+from alignment import needleman_wunsch, fasta_similarity_matrix
+from alignment import save_similarity_csv
+
 
 
 while True:
@@ -13,7 +16,12 @@ while True:
     print("4. Compare with summary")
     print("5. Save comparison report")
     print("6. Save FASTA analysis report")
-    print("7. Exit")
+    print("7. Global alignment (Needleman-Wunsch)")
+    print("8. FASTA pairwise alignment")
+    print("9. FASTA similarity matrix")
+    print("10. Save similarity matrix as CSV")
+    print("11. Exit")
+
 
     choice = input("Enter your choice: ")
 
@@ -53,8 +61,30 @@ while True:
             print("Report saved as fasta_report.txt")
 
     elif choice == "7":
-            print("Exiting program...")
-            break
+            dna1 = input("Enter first DNA sequence: ")
+            dna2 = input("Enter second DNA sequence: ")
+            needleman_wunsch(dna1, dna2)
+
+    elif choice == "8":
+        file = input("Enter FASTA file: ")
+        seqs = read_fasta_multiple(file)
+        fasta_pairwise_alignment(seqs)
+    
+    elif choice == "9":
+        file = input("Enter FASTA file: ")
+        seqs = read_fasta_multiple(file)
+        fasta_similarity_matrix(seqs)
+
+    elif choice == "10":
+        file = input("Enter FASTA file: ")
+        seqs = read_fasta_multiple(file)
+        save_similarity_csv(seqs)
+
+    elif choice == "11":
+        print("Exiting program...")
+        break
+
+
 
     else:
         print("Invalid choice. Try again.")
